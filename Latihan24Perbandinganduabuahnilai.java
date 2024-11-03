@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package latihan24perbandinganduabuahnilai;
+
+/**
+ *
+ * @author ip1pf
+ * NAMA: Ade Isna Nurkharomah
+ * KELAS: PBO12
+ * NIM: 23176027
+ * PRODI: Sistem Informasi
+ * SEMESTER: 3
+ * Deskripsi Program: Program ini berisi program untuk menampilkan Program Perbandingan dua buah nilai
+ */
+
+
+import java.util.Scanner;
+
+public class Latihan24Perbandinganduabuahnilai {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String pilihan;
+
+        do {
+            System.out.println("======== Program Perbandingan Nilai ========");
+
+            System.out.print("Masukkan nilai pertama: ");
+            int nilaiPertama = input.nextInt();
+
+            System.out.print("Masukkan nilai kedua: ");
+            int nilaiKedua = input.nextInt();
+
+            if (nilaiPertama > nilaiKedua) {
+                System.out.println("Hasil: " + nilaiPertama + " Lebih besar dari " + nilaiKedua);
+            } else if (nilaiPertama < nilaiKedua) {
+                System.out.println("Hasil: " + nilaiPertama + " Lebih kecil dari " + nilaiKedua);
+            } else {
+                System.out.println("Hasil: " + nilaiPertama + " Sama dengan " + nilaiKedua);
+            }
+
+            System.out.print("Ulangi aktivitas? (Ya/Tidak): ");
+            pilihan = input.next();
+        } while (pilihan.equalsIgnoreCase("Ya"));
+
+        input.close();
+    }
+}
